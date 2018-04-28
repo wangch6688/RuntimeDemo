@@ -10,10 +10,15 @@
 
 @interface Person : NSObject
 
+@property(copy, nonatomic) NSString * age;
 - (void)eat;
-
 + (void)eat;
-
 //+ (void)show;
+
+@end
+
+@interface Person(Property)
+
+@property (copy, nonatomic) NSString * name;
 
 @end

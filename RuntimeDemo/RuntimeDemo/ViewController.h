@@ -19,3 +19,9 @@
 + (instancetype)imageWithName:(NSString *)name;
 
 @end
+
+@interface NSObject (Property)
+
+@property (copy, nonatomic) NSString * name;
+
+@end

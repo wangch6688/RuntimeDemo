@@ -40,7 +40,13 @@
      使用场景： 如果一个系统的类方法特别多，加载类到内存的时候也会比较耗费资源（OC是懒加载机制，动态添加方法在用到的时候去加载），需要给每个方法生成映射表，可以使用动态给某个类，添加方法解决。
               performSelector方法的使用
      */
-    [self dynamicAddedFunction];
+//    [self dynamicAddedFunction];
+    
+    /*
+     4. 给分类添加属性
+     给一个类声明属性，其实本质就是给这个类添加关联，并不是直接把这个值的内存空间添加到类存空间
+     */
+    [self addPorpertyForNSObject];
 }
 
 // 消息机制的简单使用
@@ -81,6 +87,20 @@
     
 }
 
+//4. 给分类添加属性
+- (void)addPorpertyForNSObject {
+    //分类正常情况下是没有方法添加属性的，所以只能利用runtime来添加属性变量
+    //给系统NSObject类动态添加属性
+    NSObject * objc = [[NSObject alloc]init];
+    objc.name = @"Kevin";
+    NSLog(@"objc.name = %@", objc.name);
+    
+    Person * p = [[Person alloc]init];
+    p.name  = @"Kevin";
+    p.age = @"20";
+    NSLog(@"p's name = %@, age = %@",p.name, p.age);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -114,6 +134,26 @@
     return image;
     //方法交换的本质是SEL指向的方法实现变了
     //当再次调用imageNamed调用的是imageWithName的方法实现，同理调用imageWithName时，实现的是系统方法imageNamed
+}
+
+@end
+
+//定义关联的key
+static const char *key = "name";
+@implementation NSObject(Property)
+
+- (NSString *)name {
+    return objc_getAssociatedObject(self, key);
+}
+
+- (void)setName:(NSString *)name {
+    /*
+     1. 给那个对象添加关联
+     2. 关联的key，通过这个key获取
+     3. 关联的value
+     4. 关联的策略
+     */
+    objc_setAssociatedObject(self, key, name, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
