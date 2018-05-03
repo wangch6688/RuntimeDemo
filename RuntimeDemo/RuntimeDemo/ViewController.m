@@ -71,6 +71,9 @@
     [[Person class] eat];
     //无论使用哪种方法调用，底层会自动将其转成类调用方法，即 ：
     objc_msgSend([Person class], @selector(eat));
+//    NSStringFromClass(<#Class  _Nonnull __unsafe_unretained aClass#>)  获取类的string
+//    NSSelectorFromString(<#NSString * _Nonnull aSelectorName#>)  根据方法名获取响应的方法
+//    self performSelector:<#(nonnull SEL)#> withObject:<#(nullable id)#> afterDelay:<#(NSTimeInterval)#>  动态调用方法的一种，主要用来延迟调用
     
     //消息机制原理： 对象根据方法编号SEL去映射表中查找对应的方法实现
 }
@@ -132,9 +135,8 @@
 //步骤1 --> 创建我们需要交换的自定义方法
 //tip : 不能再分类中重写系统方法imageNamed，因为会把系统方法给覆盖，而且分类中无法调用super
 + (instancetype)imageWithName:(NSString *)name {
-    UIImage * image = [self imageWithName:name];
-    if (image == nil) {
-        NSLog(@"----加载空的图片----");
+    UIImage * image = [self imageWithName:name];  //实际调用的是imageNamed
+    if (image == nil) {        NSLog(@"----加载空的图片----");
 //        image = [self imageWithName:@"123"];
     }
     return image;
