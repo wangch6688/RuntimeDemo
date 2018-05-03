@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E73578D0209AAAE400D86EB2 /* AutoReleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E73578CF209AAAE400D86EB2 /* AutoReleasePool.m */; };
+		E73578D3209AB53E00D86EB2 /* LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = E73578D2209AB53E00D86EB2 /* LifeCycle.m */; };
 		E76E9F3420940D3F00CAE464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E76E9F3320940D3F00CAE464 /* AppDelegate.m */; };
 		E76E9F3720940D3F00CAE464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76E9F3620940D3F00CAE464 /* ViewController.m */; };
 		E76E9F3A20940D3F00CAE464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76E9F3820940D3F00CAE464 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		E73578CE209AAAE400D86EB2 /* AutoReleasePool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoReleasePool.h; sourceTree = "<group>"; };
 		E73578CF209AAAE400D86EB2 /* AutoReleasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoReleasePool.m; sourceTree = "<group>"; };
+		E73578D1209AB53E00D86EB2 /* LifeCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycle.h; sourceTree = "<group>"; };
+		E73578D2209AB53E00D86EB2 /* LifeCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycle.m; sourceTree = "<group>"; };
 		E76E9F2F20940D3F00CAE464 /* RuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E9F3220940D3F00CAE464 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E76E9F3320940D3F00CAE464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				E76E9F6520940E6700CAE464 /* Person.m */,
 				E73578CE209AAAE400D86EB2 /* AutoReleasePool.h */,
 				E73578CF209AAAE400D86EB2 /* AutoReleasePool.m */,
+				E73578D1209AB53E00D86EB2 /* LifeCycle.h */,
+				E73578D2209AB53E00D86EB2 /* LifeCycle.m */,
 				E76E9F3820940D3F00CAE464 /* Main.storyboard */,
 				E76E9F3B20940D4000CAE464 /* Assets.xcassets */,
 				E76E9F3D20940D4000CAE464 /* LaunchScreen.storyboard */,
@@ -280,6 +285,7 @@
 				E73578D0209AAAE400D86EB2 /* AutoReleasePool.m in Sources */,
 				E76E9F4220940D4000CAE464 /* main.m in Sources */,
 				E76E9F6620940E6700CAE464 /* Person.m in Sources */,
+				E73578D3209AB53E00D86EB2 /* LifeCycle.m in Sources */,
 				E76E9F3420940D3F00CAE464 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
