@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E73578D0209AAAE400D86EB2 /* AutoReleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = E73578CF209AAAE400D86EB2 /* AutoReleasePool.m */; };
 		E73578D3209AB53E00D86EB2 /* LifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = E73578D2209AB53E00D86EB2 /* LifeCycle.m */; };
+		E73578D6209C3A5400D86EB2 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E73578D5209C3A5400D86EB2 /* BaseModel.m */; };
 		E76E9F3420940D3F00CAE464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E76E9F3320940D3F00CAE464 /* AppDelegate.m */; };
 		E76E9F3720940D3F00CAE464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76E9F3620940D3F00CAE464 /* ViewController.m */; };
 		E76E9F3A20940D3F00CAE464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76E9F3820940D3F00CAE464 /* Main.storyboard */; };
@@ -43,6 +44,9 @@
 		E73578CF209AAAE400D86EB2 /* AutoReleasePool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoReleasePool.m; sourceTree = "<group>"; };
 		E73578D1209AB53E00D86EB2 /* LifeCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycle.h; sourceTree = "<group>"; };
 		E73578D2209AB53E00D86EB2 /* LifeCycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycle.m; sourceTree = "<group>"; };
+		E73578D4209C3A5400D86EB2 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		E73578D5209C3A5400D86EB2 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		E73578DA209C576300D86EB2 /* RuntimeDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		E76E9F2F20940D3F00CAE464 /* RuntimeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76E9F3220940D3F00CAE464 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E76E9F3320940D3F00CAE464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				E76E9F4A20940D4000CAE464 /* RuntimeDemoTests */,
 				E76E9F5520940D4100CAE464 /* RuntimeDemoUITests */,
 				E76E9F3020940D3F00CAE464 /* Products */,
+				E73578DA209C576300D86EB2 /* RuntimeDemo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +120,8 @@
 				E76E9F672094172D00CAE464 /* 123.png */,
 				E76E9F3220940D3F00CAE464 /* AppDelegate.h */,
 				E76E9F3320940D3F00CAE464 /* AppDelegate.m */,
+				E73578D4209C3A5400D86EB2 /* BaseModel.h */,
+				E73578D5209C3A5400D86EB2 /* BaseModel.m */,
 				E76E9F3520940D3F00CAE464 /* ViewController.h */,
 				E76E9F3620940D3F00CAE464 /* ViewController.m */,
 				E76E9F6420940E6700CAE464 /* Person.h */,
@@ -217,6 +224,7 @@
 				TargetAttributes = {
 					E76E9F2E20940D3F00CAE464 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					E76E9F4620940D4000CAE464 = {
 						CreatedOnToolsVersion = 9.3;
@@ -284,6 +292,7 @@
 				E76E9F3720940D3F00CAE464 /* ViewController.m in Sources */,
 				E73578D0209AAAE400D86EB2 /* AutoReleasePool.m in Sources */,
 				E76E9F4220940D4000CAE464 /* main.m in Sources */,
+				E73578D6209C3A5400D86EB2 /* BaseModel.m in Sources */,
 				E76E9F6620940E6700CAE464 /* Person.m in Sources */,
 				E73578D3209AB53E00D86EB2 /* LifeCycle.m in Sources */,
 				E76E9F3420940D3F00CAE464 /* AppDelegate.m in Sources */,
@@ -455,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D7Q249K9TW;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -465,6 +475,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = club.kevinwcc.RuntimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -473,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D7Q249K9TW;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -483,6 +497,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = club.kevinwcc.RuntimeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
