@@ -62,10 +62,6 @@
                            @"two" : @"11111",
                            @"three" : [NSNull null]
                            };
-    [dic performSelector:@selector(filtrationDic)];
-    
-    
-    
     BaseModel * model = [BaseModel modelWithDictionary: dic];
 }
 
