@@ -13,7 +13,6 @@
 @property(copy, nonatomic) NSString * age;
 - (void)eat;
 + (void)eat;
-//+ (void)show;
 
 @end
 

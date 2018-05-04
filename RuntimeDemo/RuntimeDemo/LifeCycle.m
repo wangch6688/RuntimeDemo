@@ -37,12 +37,15 @@
  */
 
 
+/*
+ 响应者链：
+ 
+ 
+ */
 
 //控制状态栏的显示隐藏，true是隐藏
 - (BOOL)prefersStatusBarHidden {
     return true;
 }
-
-
 
 @end

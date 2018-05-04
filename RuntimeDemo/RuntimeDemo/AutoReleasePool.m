@@ -82,9 +82,8 @@
             NSString *fileContents = [NSString stringWithContentsOfURL:url
                                                               encoding:NSUTF8StringEncoding
                                                                  error:&error];
-        }
     }
 //这个for循环里如果不使用@autoreleasepool，那临时变量内存可能是爆发式的，但是使用了@autoreleasepool，在每个@autoreleasepool结束时，里面的临时变量都会回收，内存使用更加合理。
+    }
 }
-
 @end

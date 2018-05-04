@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <objc/message.h>
 #import "Person.h"
+#import "BaseModel.h"
 
 @interface ViewController ()
 
@@ -53,6 +54,19 @@
      
      
      */
+    [self funtion1];
+}
+
+- (void)funtion1 {
+    NSDictionary * dic = @{@"one" : @1,
+                           @"two" : @"11111",
+                           @"three" : [NSNull null]
+                           };
+    [dic performSelector:@selector(filtrationDic)];
+    
+    
+    
+    BaseModel * model = [BaseModel modelWithDictionary: dic];
 }
 
 // 消息机制的简单使用
@@ -114,7 +128,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
 
