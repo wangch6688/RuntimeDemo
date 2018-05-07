@@ -12,7 +12,7 @@
 #import "BaseModel.h"
 
 @interface ViewController ()
-
+@property(strong, nonatomic)UIButton * button;
 @end
 
 @implementation ViewController
@@ -54,7 +54,12 @@
      
      
      */
-    [self funtion1];
+    
+    _button = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 200, 100)];
+    [_button addTarget:self action:@selector(funtion1) forControlEvents:UIControlEventTouchUpInside];
+    [_button setTitle:@"ModelTest" forState:UIControlStateNormal];
+    [_button setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:_button];
 }
 
 - (void)funtion1 {
